@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suma Maticulas Sofía</title>
+    <title>Suma Maticulas S.O.L.</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,9 +15,15 @@
             height: 100vh;
             margin: 0;
             padding: 0;
+            background-color: white; /* Fondo original */
+            transition: background-color 0.2s ease; /* Animación de cambio de color */
         }
         #matricula {
+<<<<<<< HEAD
+            font-size: 2.5rem;
+=======
             font-size: 2rem;
+>>>>>>> f5c993dfff78226bd1ebad9a217f4518e1a25bb3
             margin: 20px 0;
             padding: 10px;
             width: 300px;
@@ -50,7 +56,7 @@
 </head>
 <body>
 
-    <h1>Suma Maticulas Sofía</h1>
+    <h1>Suma Maticulas S.O.L.</h1>
     <div id="matricula"></div>
     <div id="contador"></div>
     <div id="resultado"></div>
@@ -114,6 +120,10 @@
         function reducirTiempo() {
             if (tiempoRestante > 0) {
                 tiempoRestante--; // Reducir un segundo si se hace clic
+                document.body.style.backgroundColor = "#ADD8E6"; // Cambiar a azul claro
+                setTimeout(() => {
+                    document.body.style.backgroundColor = "white"; // Volver al color original
+                }, 200); // Volver al color original después de 200 ms
             }
         }
 
